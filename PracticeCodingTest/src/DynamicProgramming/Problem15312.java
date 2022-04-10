@@ -1,14 +1,14 @@
 package DynamicProgramming;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Problem15312 {
-    private static Map<Character, Integer> AlphaMap;
+    private static Map<Character, Integer> AlphaMap = new HashMap<>();
 
-    public Problem15312() {
-        AlphaMap = new HashMap<>();
+    public static void init() {
         AlphaMap.put('A', 3);
         AlphaMap.put('B', 2);
         AlphaMap.put('C', 1);
@@ -38,7 +38,7 @@ public class Problem15312 {
     }
 
     public static void main(String[] args) {
-        new Problem15312();
+        init();
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter my name : ");

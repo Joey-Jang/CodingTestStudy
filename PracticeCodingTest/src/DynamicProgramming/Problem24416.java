@@ -6,16 +6,16 @@ import java.util.Scanner;
 
 public class Problem24416 {
     private static final List<Integer> fibonacciList = new ArrayList<>();
-    private static Integer countFib = 0;
-    private static Integer countFibonacci = 0;
+    private static int countFib = 0;
+    private static int countFibonacci = 0;
 
-    public Problem24416() {
+    public static void init() {
         fibonacciList.add(1);
         fibonacciList.add(1);
     }
 
     public static void main(String[] args) {
-        new Problem24416();
+        init();
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter num : ");
@@ -27,7 +27,7 @@ public class Problem24416 {
         System.out.printf("%d %d", countFib, countFibonacci);
     }
 
-    public static Integer fib(Integer n) {
+    public static int fib(int n) {
         if (n == 1 || n == 2) {
             countFib++;
             return 1;
@@ -36,7 +36,7 @@ public class Problem24416 {
         }
     }
 
-    public static Integer fibonacci(Integer n) {
+    public static int fibonacci(int n) {
         if (n == 1 || n == 2) {
             return 1;
         } else {

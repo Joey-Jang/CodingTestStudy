@@ -5,21 +5,19 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Problem9625 {
-    private static List<Integer> AList;
-    private static List<Integer> BList;
+    private static final List<Integer> AList = new ArrayList<>();
+    private static final List<Integer> BList = new ArrayList<>();
 
-    public Problem9625() {
-        AList = new ArrayList<>();
+    public static void init() {
         AList.add(1);
         AList.add(0);
 
-        BList = new ArrayList<>();
         BList.add(0);
         BList.add(1);
     }
 
     public static void main(String[] args) {
-        new Problem9625();
+        init();
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter K : ");

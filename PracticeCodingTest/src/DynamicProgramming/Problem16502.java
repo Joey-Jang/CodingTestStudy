@@ -3,11 +3,11 @@ package DynamicProgramming;
 import java.util.*;
 
 public class Problem16502 {
-    private final static double[] possibilities = {0.25, 0.25, 0.25, 0.25};
-    private final static Map<String, Double> mapA = new HashMap<>();
-    private final static Map<String, Double> mapB = new HashMap<>();
-    private final static Map<String, Double> mapC = new HashMap<>();
-    private final static Map<String, Double> mapD = new HashMap<>();
+    private static final double[] possibilities = {0.25, 0.25, 0.25, 0.25};
+    private static final Map<String, Double> mapA = new HashMap<>();
+    private static final Map<String, Double> mapB = new HashMap<>();
+    private static final Map<String, Double> mapC = new HashMap<>();
+    private static final Map<String, Double> mapD = new HashMap<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

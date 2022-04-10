@@ -3,22 +3,17 @@ package DynamicProgramming;
 import java.util.Scanner;
 
 public class Problem24418 {
-    private static Integer recursiveCallCnt = 0;
-    private static Integer DPCallCnt = 0;
-    private static Integer[][] DPArr;
-
-    public Problem24418(Integer n) {
-        DPArr = new Integer[n+1][n+1];
-    }
-
+    private static int recursiveCallCnt = 0;
+    private static int DPCallCnt = 0;
+    private static int[][] DPArr;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of matrix, n : ");
-        Integer n = Integer.parseInt(sc.nextLine());
-        new Problem24418(n);
+        int n = Integer.parseInt(sc.nextLine());
 
-        Integer[][] m = new Integer[n+1][n+1];
+        DPArr = new int[n+1][n+1];
+        int[][] m = new int[n+1][n+1];
         for (int i=1; i<=n; i++) {
             if (i%10 == 1 && i != 11) {
                 System.out.println("Enter 1st row : ");
@@ -42,11 +37,11 @@ public class Problem24418 {
         System.out.printf("%d %d", recursiveCallCnt, DPCallCnt);
     }
 
-    public static Integer matrixPathRecursive(Integer[][] m, Integer n) {
+    public static int matrixPathRecursive(int[][] m, int n) {
         return matrixPathRecursive(m, n, n);
     }
 
-    public static Integer matrixPathRecursive(Integer[][] m, Integer i, Integer j) {
+    public static int matrixPathRecursive(int[][] m, int i, int j) {
         if (i == 0 || j == 0) {
             recursiveCallCnt++;
             return 0;
@@ -55,7 +50,7 @@ public class Problem24418 {
         }
     }
 
-    public static Integer matrixPathDP(Integer[][] m, Integer n) {
+    public static int matrixPathDP(int[][] m, int n) {
         for (int i=0; i<=n; i++) {
             DPArr[i][0] = 0;
         }

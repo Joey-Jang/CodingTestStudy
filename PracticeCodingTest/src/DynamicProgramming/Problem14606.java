@@ -5,24 +5,23 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Problem14606 {
-    private static List<Integer> pleasureList;
+    private static final List<Integer> pleasureList = new ArrayList<>();
 
-    public Problem14606() {
-        pleasureList = new ArrayList<>();
+    public static void init() {
         pleasureList.add(0);
         pleasureList.add(0);
     }
 
     public static void main(String[] args) {
-        new Problem14606();
+        init();
 
         Scanner sc = new Scanner(System.in);
-        Integer N = sc.nextInt();
+        int N = sc.nextInt();
 
         System.out.println(calcPleasure(N));
     }
 
-    public static Integer calcPleasure(Integer N) {
+    public static int calcPleasure(int N) {
         if (N > pleasureList.size()-1) {
             pleasureList.add(pleasureList.size()-1 + pleasureList.get(pleasureList.size()-1));
             return calcPleasure(N);

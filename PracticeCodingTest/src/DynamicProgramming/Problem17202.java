@@ -13,7 +13,7 @@ public class Problem17202 {
         System.out.printf("%02d", calcComp(num1, num2));
     }
 
-    public static Integer calcComp(String num1, String num2) {
+    public static int calcComp(String num1, String num2) {
         String comp;
 
         StringBuffer sb = new StringBuffer();
