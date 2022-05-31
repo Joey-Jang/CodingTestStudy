@@ -15,7 +15,7 @@ public class Problem11727 {
 
         int num2 = 0;
         while (n - num2 * 2 >= 0) {
-            result = result.add(combination((n - num2 * 2) + num2, num2).multiply(B2.pow(num2).remainder(B10007)));
+            result = result.add(combination((n - num2 * 2) + num2, num2).multiply(B2.pow(num2)));
 
             num2++;
         }
@@ -27,7 +27,7 @@ public class Problem11727 {
         BigInteger result = BigInteger.ONE.negate();
 
         if (n >= m) {
-            result = factorial(n).divide(factorial(n-m).multiply(factorial(m))).remainder(B10007);
+            result = factorial(n).divide(factorial(n-m).multiply(factorial(m)));
         }
 
         return result;
