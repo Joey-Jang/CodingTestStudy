@@ -11,7 +11,7 @@ public class Problem24482 {
     private static int startVertex;
     private static boolean[] visited;
     private static int[] depths;
-    private static List<List<Integer>> edges = new ArrayList<List<Integer>>();
+    private static List<List<Integer>> edges = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,7 +21,7 @@ public class Problem24482 {
         startVertex = Integer.parseInt(st.nextToken());
 
         for (int i=0; i<=vertexCnt; i++) {
-            edges.add(new ArrayList<Integer>());
+            edges.add(new ArrayList<>());
         }
         visited = new boolean[vertexCnt+1];
         depths = new int[vertexCnt+1];
